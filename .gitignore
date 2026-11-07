@@ -21,3 +21,6 @@ __pycache__/
 # Editors
 .idea/
 .vscode/
+
+# Generated diagram source
+docs/diagrams/html/
