@@ -13,6 +13,12 @@ The plugin has four parts:
 
 It never reads logits, never sets temperature and never calls a model on its own. It works with any cloud model that has tools and file access.
 
+## Before and after
+
+Without the plugin, an open-ended question goes straight to the most common answer in the training data. With the plugin, the same question goes through research, a written consensus baseline, a divergent pool, a critique and a selection step. Accepted ideas land in `ideas.md`, so the next run can avoid repeating them.
+
+The measured effect is narrower than the picture. In the 2026 run the full pipeline raised embedding diversity from 0.634 to 0.692 and cross-run novelty from 0.057 to 0.477, and judged usefulness stayed flat (3.254 pooled against 3.375). The numbers and caveats are in [docs/results.md](docs/results.md). All diagrams are in [docs/diagrams.md](docs/diagrams.md).
+
 ## Install
 
 From a local checkout:
@@ -82,6 +88,41 @@ Examples that do not trigger:
 - "Rename this function to parseConfig"
 - "What is the capital of France?"
 - "Run npm test"
+
+### A worked example
+
+Prompt:
+
+```text
+Brainstorm ways for a small city to cut household food waste without new bins.
+```
+
+The classifier scores this as open-ended and attaches the pipeline. The model then works through the phases. The shape of the answer is fixed by the output contract:
+
+```markdown
+## Result
+1. <idea, one paragraph>
+2. <idea, one paragraph>
+
+## Why these are not the obvious answers
+- <the consensus answer this idea departs from>
+
+## What I rejected
+- <idea that repeated the consensus, and why it was cut>
+
+## Process
+Research: <sources and what they changed>
+Personas: <the three lenses>
+Divergence: <how many candidates, how many below 0.1 probability>
+
+## Sources
+- <primary source and URL>
+
+## Next step
+- <the smallest test that would tell you whether idea 1 works>
+```
+
+The two winners are also written to `.jarvis/ideas.md`, so the next run can reject them as duplicates and look somewhere else.
 
 ### Commands
 
@@ -268,11 +309,26 @@ The plugin targets OpenCode 2.x and `@opencode/plugin@2.2.5`, and it does not im
 ## Limits
 
 - The trigger classifier is English-centric. A multilingual version needs its own test table.
-- The full pipeline has not been tested as a unit against a human baseline. In the 2026 run it raised embedding diversity (0.692 against 0.634 for plain) and cross-run novelty (0.477 against 0.057), and it did not raise judged usefulness (3.254 pooled, 3.480 selected, against 3.375). `docs/results.md` reports the measured numbers and the caveats. In that run it raised embedding diversity from 0.634 to 0.692 and cross-run novelty from 0.057 to 0.477, and judged usefulness stayed flat (3.254 against 3.375), so no result here supports a usefulness claim.
+- The full pipeline has not been tested as a unit against a human baseline. In the 2026 run it raised embedding diversity (0.692 against 0.634 for plain) and cross-run novelty (0.477 against 0.057), and it did not raise judged usefulness (3.254 pooled, 3.480 selected, against 3.375). `docs/results.md` reports the measured numbers and the caveats.
 - Keyword stimuli, the out-of-box instruction and brainwriting raised cross-run novelty and lowered judged usefulness in the same run. They stay in the pipeline because a brief that asks for range wants them, and the cost is measured rather than hidden.
 - The default dedup is lexical. It misses synonymy. Use embeddings if that matters.
 - LLM novelty judges are unstable. The evaluation uses two judges and a manual spot-check protocol, not a single score.
 - The plugin does not set temperature or top-p. If a provider exposes them, set them yourself. The pipeline is designed to work without them.
+
+## Diagrams
+
+Two images. The first shows what changes; the second shows what the change measured.
+
+![Before and after](docs/diagrams/before-after.png)
+
+![Measured means](docs/diagrams/eval-means.png)
+
+Both are generated from source: the panel from `docs/diagrams/html/before-after.html` with headless Chromium, the chart from `docs/diagrams/make_diagrams.py` with matplotlib.
+
+```sh
+python3 docs/diagrams/render_html.py
+python3 docs/diagrams/make_diagrams.py
+```
 
 ## Documentation
 
@@ -282,3 +338,8 @@ The plugin targets OpenCode 2.x and `@opencode/plugin@2.2.5`, and it does not im
 - `docs/results.md`: the evaluation summary and caveats.
 - `research/`: one file per technique with the setup, the statistics, the limitations and the prompt wording.
 - `eval/README.md`: how to run the evaluation and the manual spot check.
+- `docs/diagrams.md`: the Mermaid sources for every diagram.
+
+## License
+
+MIT, copyright 2026 Ronyecz Regő Botond. See `LICENSE`. You can use and redistribute the plugin, including commercially, as long as the copyright notice stays with it.

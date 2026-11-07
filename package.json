@@ -4,6 +4,7 @@
   "description": "OpenCode plugin that makes cloud LLMs ideate like researchers: research, diverge, deduplicate, critique, converge.",
   "type": "module",
   "license": "MIT",
+  "author": "Ronyecz Regő Botond",
   "exports": {
     ".": "./src/index.ts"
   },

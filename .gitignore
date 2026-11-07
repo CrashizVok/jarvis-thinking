@@ -5,3 +5,19 @@ eval/raw/
 eval/cache/
 *.log
 .DS_Store
+
+# Local environment files
+.env
+.env.*
+
+# Test and coverage output
+coverage/
+test-results/
+playwright-report/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Editors
+.idea/
+.vscode/

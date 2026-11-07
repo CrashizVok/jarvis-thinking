@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+:root{--paper:#f1f2ef;--ink:#101418;--muted:#5f656d;--rule:#cdd0c9;--accent:#c2410c;--good:#1f6f43}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DejaVu Sans",Helvetica,Arial,sans-serif}
+.page{width:1400px;padding:56px 60px 44px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:34px}
+h1{font-size:44px;line-height:1.02;margin:0;letter-spacing:-1.4px;font-weight:700;max-width:900px}
+.head p{margin:0;font-size:14px;color:var(--muted);max-width:300px;line-height:1.4;text-align:right}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule)}
+.side{padding:26px 28px 24px}
+.side.before{background:#e6e6e1;border-right:1px solid var(--rule)}
+.side.after{background:#fbfaf6}
+.label{font-size:11px;letter-spacing:.14em;font-weight:700;margin:0 0 14px;color:var(--muted)}
+.side.after .label{color:var(--accent)}
+.side h2{font-size:22px;line-height:1.16;margin:0 0 26px;font-weight:700}
+.step{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--rule)}
+.step:last-child{border-bottom:1px solid var(--rule)}
+.num{font-size:11px;font-weight:700;color:var(--muted);padding-top:2px}
+.step b{display:block;font-size:14.5px;line-height:1.3;margin-bottom:3px}
+.step span{display:block;font-size:12.5px;line-height:1.4;color:var(--muted)}
+.out{margin-top:18px;font-size:12.5px;line-height:1.45}
+.out b{font-weight:700}
+.out.bad b{color:#9b2c1c}
+.out.good b{color:var(--good)}
+.evidence{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);border-top:0}
+.m{padding:18px 24px;border-right:1px solid var(--rule)}
+.m:last-child{border-right:0}
+.m .k{font-size:10.5px;letter-spacing:.12em;color:var(--muted);margin:0 0 6px;font-weight:700}
+.m .v{font-size:30px;margin:0;font-weight:700;letter-spacing:-1px}
+.m .d{font-size:12px;color:var(--muted);margin:3px 0 0}
+.foot{margin-top:14px;font-size:11.5px;color:var(--muted)}
+</style></head><body><div class="page">
+<div class="head">
+  <h1>Same question.<br>One answer or a searched pool.</h1>
+  <p>Measured on 6 open-ended tasks, 3 repetitions, one cloud model.</p>
+</div>
+<div class="split">
+  <div class="side before">
+    <p class="label">WITHOUT THE PLUGIN</p>
+    <h2>The first plausible answer ships</h2>
+    <div class="step"><span class="num">01</span><div><b>Prompt goes straight to the model</b><span>No source check, no written baseline.</span></div></div>
+    <div class="step"><span class="num">02</span><div><b>Typicality decides</b><span>The common answer is the path of least resistance.</span></div></div>
+    <div class="step"><span class="num">03</span><div><b>One list, no rejected ideas</b><span>The reader cannot see what was cut or why.</span></div></div>
+    <div class="step"><span class="num">04</span><div><b>No memory</b><span>The next session starts from the same place.</span></div></div>
+    <p class="out bad"><b>Result:</b> the same habit tracker, marketplace and dashboard that everyone else gets.</p>
+  </div>
+  <div class="side after">
+    <p class="label">WITH JARVIS-THINKING</p>
+    <h2>The non-obvious idea has to survive</h2>
+    <div class="step"><span class="num">01</span><div><b>Research before ideas</b><span>Primary sources, failures and prior art.</span></div></div>
+    <div class="step"><span class="num">02</span><div><b>The consensus answer is written down</b><span>It becomes the baseline that new ideas must beat.</span></div></div>
+    <div class="step"><span class="num">03</span><div><b>Five candidates, two under 0.1</b><span>The tail is forced into the pool.</span></div></div>
+    <div class="step"><span class="num">04</span><div><b>Brainwriting and critique</b><span>Build, combine, invert, then repair.</span></div></div>
+    <div class="step"><span class="num">05</span><div><b>Dedup and consensus exclusion</b><span>Restatements are removed before selection.</span></div></div>
+    <div class="step"><span class="num">06</span><div><b>One or two defended winners</b><span>Saved to ideas.md with the rejected list and sources.</span></div></div>
+    <p class="out good"><b>Result:</b> a pool that differs between runs, with the obvious answer named and left behind.</p>
+  </div>
+</div>
+<div class="evidence">
+  <div class="m"><p class="k">WITHIN-RUN DIVERSITY</p><p class="v">0.692</p><p class="d">plain prompt: 0.634</p></div>
+  <div class="m"><p class="k">CROSS-RUN NOVELTY</p><p class="v">0.477</p><p class="d">plain prompt: 0.057</p></div>
+  <div class="m"><p class="k">JUDGED USEFULNESS</p><p class="v">3.25</p><p class="d">plain prompt: 3.38, no gain</p></div>
+</div>
+<p class="foot">The pipeline is not more useful on this sample. It is more varied, and it shows its work. Full table: docs/results.md.</p>
+</div></body></html>
