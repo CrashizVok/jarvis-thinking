@@ -1,0 +1,7 @@
+{
+  "task": "food-waste",
+  "brief": "{\n  \"research_brief\": [\n    \"Current Approach 1: Smart storage hardware, such as ethylene absorbers and automated vacuum-sealers, designed to physically delay spoilage.\",\n    \"Current Approach 2: In-home processing appliances, including countertop dehydrators and compact composters that turn scraps into usable inputs.\",\n    \"Current Approach 3: AI-driven inventory software using computer vision or recipe engines to maximize use of existing pantry items.\",\n    \"Failure 1: High user friction—manual logging apps show steep drop-off in active usage, as reported in consumer behavior studies.\",\n    \"Failure 2: Energy offset—electric countertop appliances often consume significant power merely to dry food, shifting ecological impact to the energy grid.\",\n    \"Criticism: Focusing primarily on household tech places systemic burden onto consumers while ignoring retail over-stocking and packaging incentives.\",\n    \"Analogy: Passive HVAC climate control—just as smart thermostats auto-regulate temperature, food storage should dynamically adjust micro-humidity without manual setup.\"\n  ]\n}",
+  "generatedAt": "2026-11-07T13:52:05.977Z",
+  "model": "gemini-3.5-flash",
+  "verified": false
+}

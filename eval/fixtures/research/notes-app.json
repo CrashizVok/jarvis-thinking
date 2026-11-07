@@ -1,0 +1,7 @@
+{
+  "task": "notes-app",
+  "brief": "{\n  \"title\": \"Research Brief: Feature Ideas for Researcher Note-Taking Apps\",\n  \"brief\": [\n    \"Approach 1 (Networked Thought): Bidirectional linking and atomic notes to surface emergent connections across literature.\",\n    \"Approach 2 (Structured Schemas): Metadata-heavy architectures featuring strict schema validation, citation tracking, and PDF field extraction.\",\n    \"Approach 3 (AI Synthesis): RAG-driven semantic embeddings to auto-cluster related source documents and highlight contradictory claims.\",\n    \"Limitation 1 (Organizational Overhead): High curation friction causes the 'collector's fallacy,' where users hoard notes without synthesizing insights (commonly reported in UX research).\",\n    \"Limitation 2 (Decontextualization): Over-atomizing notes isolates findings from their original methodological context, rendering snippets misleading.\",\n    \"Mainstream Criticism: Interactive 3D knowledge graph visualizers serve primarily as aesthetic vanity features rather than effective retrieval tools.\",\n    \"Adjacent Analogy: Software version control (Git)—treating research hypotheses like code branches with commit histories, diffs, and merge requests.\"\n  ]\n}",
+  "generatedAt": "2026-11-07T13:54:03.489Z",
+  "model": "gemini-3.5-flash",
+  "verified": false
+}

@@ -1,0 +1,33 @@
+{
+  "name": "jarvis-thinking",
+  "version": "0.1.0",
+  "description": "OpenCode plugin that makes cloud LLMs ideate like researchers: research, diverge, deduplicate, critique, converge.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "skills",
+    "agents",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "eval": "node --experimental-strip-types eval/run.ts",
+    "install:agent": "node --experimental-strip-types scripts/install-agent.ts"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^4.3.2",
+    "@opencode/plugin": "2.2.5",
+    "@types/node": "^26.6.6",
+    "typescript": "^6.0.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "task": "bike-share",
+  "brief": "{\"type\":\"object\",\"brief\":{\"title\":\"Weekday Commute Campaign Concepts for Bike-Share\",\"bullets\":[\"Behavioral-nudge school: 'Commute Streak' rewards repeated weekday trips with personalized route prompts and small guaranteed incentives; evidence is commonly reported pilot results.\",\"Access-integration school: 'Door-to-Door' pairs employer transit passes with docks near stations and workplaces; evidence is operator case reporting.\",\"Social-marketing school: workplace teams, ambassadors, and rider stories normalize commuting; evidence is commonly reported campaign evaluations.\",\"Limitation: safety, weather, and route discomfort deter conversion; discount-only campaigns often yield trials but weak weekday retention, commonly reported.\",\"Limitation: peak rebalancing and dock scarcity break campaign promises; unreliable availability can erode trust, per operator reports.\",\"Strongest criticism: mainstream view assumes information and incentive gaps; critics argue bike-share mainly substitutes for walking/transit, so commute campaigns may not reduce car congestion, with mixed travel-survey evidence.\",\"Adjacent analogy: workplace wellness programs—incentives spark initial participation, but habit depends on supportive defaults such as showers, secure parking, and schedules.\"]}}",
+  "generatedAt": "2026-11-07T14:29:12.735Z",
+  "model": "deepseek-v4.1-flash",
+  "verified": false
+}

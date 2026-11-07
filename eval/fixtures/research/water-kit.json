@@ -1,0 +1,7 @@
+{
+  "task": "water-kit",
+  "brief": "{\"brief\":[\"Names/positioning: ClinicClear—decision-grade triage; SafeSip—fast intake screening; RuralReveal—maintenance-light, locally repairable.\",\"Approach: colorimetric strip kits prioritize simplicity and low training for rural clinics.\",\"Approach: portable incubation/membrane kits trade cost and logistics for higher specificity.\",\"Approach: participatory community testing pairs kits with records and behavior-change follow-up.\",\"Limitation: heat-sensitive reagents and turbidity interference are commonly reported in field evaluations.\",\"Limitation: power, reagent resupply, and maintenance burdens often drive discontinuation in rural deployments, commonly reported.\",\"Strongest criticism: mainstream “lab-grade accuracy” positioning overpromises; clinics need actionable triage and supply resilience, not precision they cannot maintain. Analogy: malaria RDTs accept lower lab precision to enable decentralized, protocol-driven decisions.\"]}",
+  "generatedAt": "2026-11-07T14:29:28.595Z",
+  "model": "deepseek-v4.1-flash",
+  "verified": false
+}

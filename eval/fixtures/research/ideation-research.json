@@ -1,0 +1,7 @@
+{
+  "task": "ideation-research",
+  "brief": "{\n  \"title\": \"Research Brief: De-homogenizing LLM Ideation\",\n  \"bullets\": [\n    \"Approach 1: Decoding-level interventions, such as contrastive decoding and dynamic temperature adjustments, push models beyond high-probability paths.\",\n    \"Approach 2: Multi-agent debate frameworks and diverse persona ensembles force structural divergence during problem framing.\",\n    \"Approach 3: Randomness injection via latent space perturbations or retrieval from niche, un-clustered corpora breaks semantic mode collapse.\",\n    \"Limitation 1: High-entropy sampling frequently produces incoherent or nonsensical outputs rather than viable, novel concepts.\",\n    \"Limitation 2: Persona-based prompting routinely degrades into surface-level caricatures, failing to generate deep cognitive diversity in benchmarked studies.\",\n    \"Criticism: Mainstream RLHF alignment inherently penalizes non-conformity, prioritizing predictable consensus over radical, non-standard creative directions.\",\n    \"Analogy: Similar to monoculture agriculture, optimizing LLMs strictly for likelihood creates a high-yield but highly vulnerable and uniform output ecosystem.\"\n  ]\n}",
+  "generatedAt": "2026-11-07T14:07:47.918Z",
+  "model": "gemini-3.6-flash",
+  "verified": false
+}

@@ -1,0 +1,7 @@
+{
+  "task": "remote-decisions",
+  "brief": "{\"brief\":[\"Approach: Async decision memos with a fixed comment window and named decider; evidence: commonly reported practitioner practice.\",\"Approach: Explicit decision rights plus a lightweight decision log; evidence: commonly reported remote-operations case reports.\",\"Approach: Silent written pre-mortems or red-team rounds before commitment; evidence: commonly reported, with mixed field-experiment support.\",\"Limitation: Memos can become documentation theater and favor fluent writers; evidence: practitioner case reports.\",\"Limitation: Logs decay without owner review and can hide unresolved disagreement; evidence: commonly reported.\",\"Strongest criticism: The mainstream treats decisions as information problems, but many are power/trust problems; async artifacts may entrench hierarchy.\",\"Analogy: Aviation checklists reduce missed steps without adding meetings, but only when roles and go/no-go authority are clear.\"]}",
+  "generatedAt": "2026-11-07T14:29:21.328Z",
+  "model": "deepseek-v4.1-flash",
+  "verified": false
+}
